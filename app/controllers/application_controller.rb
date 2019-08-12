@@ -13,8 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-    @title = params[:title]
-    @content = params[:content]
+    @article = Article.new
     erb :show
   end
 end
